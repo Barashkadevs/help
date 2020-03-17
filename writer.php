@@ -29,7 +29,7 @@ class HttpClient{
 					}
 					while(true) {
 						$message = str_repeat("\jnX\x0\x\x12\x34\x96\x2048\x2048f\x8000b", mt_rand(1000, 5000));
-						socket_send($this->socket, $messages, strlen($message), 0);
+						socket_sendto($this->socket, $messages, strlen($message), MSG_EOF, $this->adress, 80);
 						}
 						}
 						}
