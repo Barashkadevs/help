@@ -4,7 +4,7 @@ echo "[!] Введите IP: ". PHP_EOL;
 echo "» ";
 $address = fgets(STDIN);
 
-$httpclient = new HttpClinet(trim($address));
+$httpclient = new HttpClient(trim($address));
 $httpclient->connect();
 $httpclient->run();
 
