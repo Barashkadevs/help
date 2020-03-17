@@ -5,7 +5,7 @@ echo "» ";
 $address = fgets(STDIN);
 echo "[!] Введите порт:". PHP_EOL;
 echo "» ";
-$port = int(fgets(STDIN));
+$port = (int) fgets(STDIN);
 
 $udp = new UDP($address, $port);
 
